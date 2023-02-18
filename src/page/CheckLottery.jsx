@@ -5,7 +5,7 @@ const LotteryForm = ({ handleSubmit }) => (
   <>
     <div className="w-1/2 m-auto mt-8 ">
       <h1 className="text-center my-10 text-3xl bg-gradient-to-r from-cyan-500 to-blue-500 py-3 rounded-[20px] text-white">
-        ตรวจลอตเตอรี่ by KhunBoeing
+        ตรวจลอตเตอรี่ by Boeing
       </h1>
       <div className="bg-gradient-to-r from-cyan-500 to-green-500 px-5 py-9 rounded-[20px] shadow-xl">
         <form onSubmit={handleSubmit}>
