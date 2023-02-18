@@ -402,11 +402,15 @@ const useCheckLottery = (lotteryData, listOfCheckingNumber) => {
   };
 };
 
+const getDate = (date) => new Date(date).toISOString().slice(0, 10);
+
 const CheckLottery = () => {
   const [listOfCheckingNumber, setListOfCheckingNumber] = useState([]);
 
   // เรียกใช้งาน hook
-  const { lotteryData, lotteryDateTitle } = useFetchLottery("2022-12-05");
+  const { lotteryData, lotteryDateTitle } = useFetchLottery(
+    getDate(new Date())
+  );
   const { toggleCalculateResult, setToggleCalculateResult, lotteryResult } =
     useCheckLottery(lotteryData, listOfCheckingNumber);
   console.log("lotteryResult", lotteryResult);
